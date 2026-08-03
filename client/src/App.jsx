@@ -1,5 +1,5 @@
   import React from 'react'
-  import { Routes , Route} from 'react-router-dom'
+  import { Routes , Route, Navigate} from 'react-router-dom'
   import AuthPage from './pages/AuthPage'
   import { AuthLayout, GuestLayout } from './pages/Layout'
   import HomePage from './pages/HomePage'
@@ -27,6 +27,11 @@
           
 
         </Route>
+
+
+        {/* catch all  */}
+        <Route path='*' element={<Navigate to="/" replace />} />
+
 
 
 
