@@ -234,7 +234,8 @@ export function AppContextProvider({children}){
 
     useEffect(() => {
       return () => {
-        debouncedSave.cancel();
+        // debouncedSave.cancel();
+        debouncedSave.flush();
       }
     }, [debouncedSave])
     
